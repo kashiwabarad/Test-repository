@@ -15,32 +15,32 @@ import javax.faces.bean.RequestScoped;
 @RequestScoped
 public class Hello {
 
-	//出力テキスト用
-	private String out;
+    //出力テキスト用
+    private String out;
+    //入力テキスト用
+    private String name;
 
-	//入力テキスト用
-	private String name;
+    //----------------------------------------------------------
+    //アクセサメソッド
+    public String getOut() {
+        return out;
+    }
 
-	//----------------------------------------------------------
-	//アクセサメソッド
-	public String getOut() {
-		return out;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	//----------------------------------------------------------
+    public void setName(String name) {
+        this.name = name;
+    }
+    //----------------------------------------------------------
 
+    //ボタンクリック
+    public String click() {
+        out = "はろー「" + name + "」さん";
+        return null;
+    }
 
-	//ボタンクリック
-	public String click(){
-		out = "はろー「" + name + "」さん";
-		return null;
-	}
     /**
      * Creates a new instance of Hello
      */
